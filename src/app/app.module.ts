@@ -1,14 +1,14 @@
+import { UserSearchModule } from './components/user-search/user-search.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserSearchComponent } from './components/user-search/user-search.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, UserSearchComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, NotFoundComponent],
+  imports: [BrowserModule, AppRoutingModule, UserSearchModule],
   providers: [],
   bootstrap: [AppComponent],
 })
