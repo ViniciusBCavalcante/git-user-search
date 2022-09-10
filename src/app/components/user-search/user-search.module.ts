@@ -1,3 +1,4 @@
+import { UserInfoModule } from './../user-info/user-info.module';
 import { UserSearchComponent } from './user-search.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import { InputTextModule } from 'primeng/inputtext';
     ButtonModule,
     RippleModule,
     InputTextModule,
+    UserInfoModule,
   ],
 })
 export class UserSearchModule {}

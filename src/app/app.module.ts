@@ -1,3 +1,4 @@
+import { UserInfoModule } from './components/user-info/user-info.module';
 import { UserSearchModule } from './components/user-search/user-search.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
