@@ -1,9 +1,53 @@
 .card-lateral {
   border-top-right-radius: 28px;
   min-height: calc(100vh);
+  background-color: rgba(59, 67, 86, 255);
+}
+
+.user-input {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+// .float-input {
+//   background-color: rgba(90, 99, 119, 0.9);
+// }
+
+$inputFilledBg: rgba(90, 99, 119, 0.9);
+
+$inputTextColor: white;
+
+// $buttonTextColor: white;
+
+.card-lateral-title {
+  font-weight: bold;
+  color: white;
+}
+
+.usuarios-historico {
+  padding: 10px 0px;
+  width: 170px;
+  margin: 0 0 5px 10px;
+  text-align: center;
+  font-size: 15px;
+  background-color: rgba(90, 99, 119, 0.9);
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+  margin-top: 10px;
 }
 
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.texto-inicial {
+  font-weight: bold;
+  font-size: 20px;
 }

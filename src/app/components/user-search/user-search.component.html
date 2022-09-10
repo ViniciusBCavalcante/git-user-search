@@ -1,10 +1,43 @@
 <div class="row mx-0">
-  <div class="col-lg-3 col-md-4 card pt4 mt-2 card-lateral">
-    <div>Filtre um usuário</div>
+  <div class="col-lg-3 col-md-4 card card-lateral">
+    <div class="card-lateral-title mt-4">Filtre um usuário</div>
+
+    <div class="mt-4 user-input">
+      <span class="p-float-label p-input-icon-left">
+        <i class="pi pi-user"></i>
+        <input id="float-input" type="text" [(ngModel)]="username" pInputText />
+        <label for="float-input">Username</label>
+      </span>
+      <button
+        pButton
+        pRipple
+        type="button"
+        icon="pi pi-search"
+        class="p-button-rounded p-button-success p-button-text"
+        (click)="toggleFiltro()"
+      ></button>
+    </div>
+
+    <div class="card-lateral-title mt-4">Últimos usuários filtrados</div>
+
+    <div class="row mx-0 mt-1">
+      <div
+        *ngFor="let item of username_filtrado"
+        class="col-6 usuarios-historico"
+      >
+        <a (click)="setUser(item.user)">{{ item.user }}</a>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-9 col-md-8 pt4 mt-2 card-principal">
-    <div class="texto-inicial center">
-      Digite um usuário ao lado para continuar
+
+  <div class="col-lg-9 col-md-8 card-principal">
+    <div *ngIf="filtrado == false">
+      <div class="texto-inicial center mt-4">
+        Pesquise um usuário do GitHub ao lado para continuar
+      </div>
+    </div>
+    <div *ngIf="filtrado == true">
+      <div class="texto-inicial center mt-4">Foi filtrado</div>
     </div>
   </div>
 </div>
