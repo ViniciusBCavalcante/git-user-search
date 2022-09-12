@@ -1,15 +1,25 @@
+import { HttpClient } from '@angular/common/http';
+import { ApiCallService } from './../../shared/services/api-call/api-call.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-info',
   templateUrl: './user-info.component.html',
-  styleUrls: ['./user-info.component.scss']
+  styleUrls: ['./user-info.component.scss'],
 })
 export class UserInfoComponent implements OnInit {
+  api: any;
+  url: string = 'https://api.github.com/users/mojombo';
 
-  constructor() { }
+  constructor(private consumoApi: ApiCallService, https: HttpClient) {}
 
-  ngOnInit(): void {
+  getDados() {
+    this.consumoApi.getDadosService(this.url).subscribe((result) => {
+      this.api = result;
+    });
   }
 
+  ngOnInit() {
+    this.getDados();
+  }
 }

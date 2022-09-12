@@ -7,11 +7,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { RepoInfoComponent } from './components/repo-info/repo-info.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, UserSearchModule, RepoInfoModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    UserSearchModule,
+    UserInfoModule,
+    RepoInfoModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
