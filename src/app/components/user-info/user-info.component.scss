@@ -1,0 +1,35 @@
+body {
+  background-color: #b3e5fc;
+  border-radius: 10px;
+}
+
+.card {
+  width: 600px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.user-info {
+  margin: 0 0 0 15px;
+}
+
+.stats {
+  background: #f2f5f8 !important;
+  width: 200px;
+  justify-content: space-around;
+  color: #000 !important;
+}
+
+.follow {
+  font-size: 10px;
+  color: #a1aab9;
+}
+.quantity {
+  font-weight: 500;
+}

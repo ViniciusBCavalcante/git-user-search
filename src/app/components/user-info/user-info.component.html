@@ -1,1 +1,56 @@
-<p>user-info works!</p>
+<div class="container mt-2 d-flex">
+  <div class="card p-3">
+    <div class="d-flex align-items-center">
+      <div class="image">
+        <img
+          src="https://avatars.githubusercontent.com/u/1?v=4"
+          class="profile-picture"
+        />
+      </div>
+
+      <div class="user-info ml-3 w-100">
+        <h4 class="mb-0 mt-0">Tom Preston-Werner</h4>
+        <span>-</span>
+        <br />
+        <span>mojombo</span>
+        <br />
+        <span>San Francisco</span>
+
+        <div class="p-2 mt-2 bg-primary d-flex rounded text-white stats">
+          <div class="d-flex flex-column">
+            <span class="follow">Followers</span>
+            <span class="quantity">23167</span>
+          </div>
+
+          <div class="d-flex flex-column">
+            <span class="follow">Following</span>
+            <span class="quantity">1111</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2 d-flex">
+  <div class="card p-3">
+    <div class="d-flex align-items-center">
+      <div class="image">
+        <p-skeleton
+          shape="circle"
+          width="200px"
+          height="200px"
+          styleClass="p-mr-2"
+        ></p-skeleton>
+      </div>
+
+      <div class="user-info ml-3 w-100">
+        <p-skeleton width="350px" height="30px" styleClass="mb-1"></p-skeleton>
+        <p-skeleton width="300px" height="20px" styleClass="mb-1"></p-skeleton>
+        <p-skeleton width="250px" height="20px" styleClass="mb-1"></p-skeleton>
+        <p-skeleton width="200px" height="20px" styleClass="mb-1"></p-skeleton>
+        <p-skeleton width="250px" height="55px" styleClass="mb-1"></p-skeleton>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { RepoInfoModule } from './../repo-info/repo-info.module';
 import { UserInfoModule } from './../user-info/user-info.module';
 import { UserSearchComponent } from './user-search.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ import { InputTextModule } from 'primeng/inputtext';
     RippleModule,
     InputTextModule,
     UserInfoModule,
+    RepoInfoModule,
   ],
 })
 export class UserSearchModule {}
