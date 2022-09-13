@@ -80,14 +80,26 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-elemento>
-        <tr style="cursor: pointer" (click)="toggleModal()">
-          <td class="table-content">{{ elemento.name }}</td>
-          <td class="table-content">{{ elemento.description }}</td>
-          <td class="table-content">{{ elemento.language }}</td>
-          <td class="table-content">
+        <tr
+          style="cursor: pointer"
+          [class.ui-state-highlight]="elemento === highlighted"
+          (click)="toggleModal()"
+        >
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.name }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.description }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.language }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
             {{ elemento.created_at | date: "dd/MM/yyyy" }}
           </td>
-          <td class="table-content">{{ elemento.stargazers_count }}</td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.stargazers_count }}
+          </td>
         </tr>
       </ng-template>
     </p-table>
@@ -148,23 +160,41 @@
 
 <div>
   <p-dialog
-    header="Header"
+    header="Detalhamento"
     [(visible)]="displayModal"
     [modal]="true"
-    [style]="{ width: '75vw' }"
+    [style]="{ width: '40vw' }"
     [draggable]="false"
     [resizable]="false"
   >
-    <p class="m-0">
-      <!-- {{ api.name }} -->
-    </p>
-    <ng-template pTemplate="footer">
+    <div class="row mx-0">
+      <div class="col-4">
+        <p class="titulo-detalhamento mb-0">Updated at</p>
+        <p class="texto-detalhamento">2021-01-13</p>
+        <p class="titulo-detalhamento mb-0">Pushed at</p>
+        <p class="texto-detalhamento">2015-01-27</p>
+      </div>
+      <div class="col-4">
+        <p class="titulo-detalhamento mb-0">Forks count</p>
+        <p class="texto-detalhamento">7</p>
+        <p class="titulo-detalhamento mb-0">Watchers count</p>
+        <p class="texto-detalhamento">5</p>
+      </div>
+      <div class="col-4">
+        <!-- TODO: Fazer ngIf true = sim, false = não -->
+        <p class="titulo-detalhamento mb-0">Has issues</p>
+        <p class="texto-detalhamento">Sim</p>
+        <p class="titulo-detalhamento mb-0">issues count</p>
+        <p class="texto-detalhamento">2</p>
+      </div>
+    </div>
+    <!-- <ng-template pTemplate="footer">
       <p-button
         icon="pi pi-check"
         (click)="displayModal = false"
         label="Ok"
         styleClass="p-button-text"
       ></p-button>
-    </ng-template>
+    </ng-template> -->
   </p-dialog>
 </div>

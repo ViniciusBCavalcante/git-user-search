@@ -18,6 +18,24 @@ p {
   justify-content: center;
 }
 
+.titulo-detalhamento {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.texto-detalhamento {
+  text-align: center;
+}
+
+::ng-deep .p-dialog .p-dialog-header .p-dialog-title {
+  font-size: 24px;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+
 :host ::ng-deep .p-dialog .p-button {
   min-width: 6rem;
 }
@@ -32,4 +50,8 @@ p {
 
 :ng-deep .p-datatable .p-datatable-tbody > tr > td {
   text-align: center !important;
+}
+
+.ui-state-highlight > td {
+  background: #e9ecef;
 }
