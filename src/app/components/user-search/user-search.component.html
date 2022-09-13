@@ -5,7 +5,13 @@
     <div class="mt-4 user-input">
       <span class="p-float-label p-input-icon-left">
         <i class="pi pi-user"></i>
-        <input id="float-input" type="text" [(ngModel)]="username" pInputText />
+        <input
+          id="float-input"
+          type="text"
+          [(ngModel)]="username"
+          pInputText
+          required
+        />
         <label for="float-input" style="color: white">Username</label>
       </span>
       <button
@@ -42,3 +48,4 @@
     </div>
   </div>
 </div>
+<p-toast></p-toast>

@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { InputTextModule } from 'primeng/inputtext';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [UserSearchComponent],
@@ -19,6 +20,7 @@ import { InputTextModule } from 'primeng/inputtext';
     InputTextModule,
     UserInfoModule,
     RepoInfoModule,
+    ToastModule,
   ],
 })
 export class UserSearchModule {}

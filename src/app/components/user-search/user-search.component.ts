@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-user-search',
   templateUrl: './user-search.component.html',
   styleUrls: ['./user-search.component.scss'],
+  providers: [MessageService],
 })
 export class UserSearchComponent {
   value3: string;
@@ -14,13 +16,30 @@ export class UserSearchComponent {
   username_list: any = [];
   username_filtrado: any = [];
 
-  constructor() {}
+  constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {}
 
   toggleFiltro() {
-    this.filtrado = true;
-    this.getUserHistorico();
+    console.log(this.username);
+    if (this.username !== '' && this.username !== undefined) {
+      this.filtrado = true;
+      this.getUserHistorico();
+    } else {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Atenção!',
+        detail: 'Você deve digitar um usuário na pesquisa.',
+      });
+    }
+  }
+
+  showError() {
+    this.messageService.add({
+      severity: 'error',
+      summary: 'Error',
+      detail: 'Message Content',
+    });
   }
 
   getUserHistorico() {
@@ -49,7 +68,7 @@ export class UserSearchComponent {
 
   setUser(user: any) {
     console.log(user[0]);
-    this.user = user[0];
+    this.username = user[0];
     this.getUserHistorico();
   }
 }
