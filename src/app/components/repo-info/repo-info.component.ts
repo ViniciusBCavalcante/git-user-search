@@ -10,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class RepoInfoComponent implements OnInit {
   api: any;
   skeleton: any = ['1', '2', '3', '4', '5'];
-  url: string = 'https://api.github.com/users/mojombo/repos';
+
+  // url: string = 'https://api.github.com/users/mojombo/repos';
+  url: string = 'https://api.github.com/users/asdxaa/repos';
+
   dadosTabela: any = {
     header: ['Name', 'Description', 'Language', 'Created at', 'Stars'],
     body: [],
@@ -22,9 +25,16 @@ export class RepoInfoComponent implements OnInit {
   constructor(private consumoApi: ApiCallService, https: HttpClient) {}
 
   getDados() {
-    this.consumoApi.getDadosService(this.url).subscribe((result) => {
-      this.api = result;
-    });
+    this.consumoApi.getDadosService(this.url).subscribe(
+      (result) => {
+        if (result.status == 200) {
+          this.api = result;
+        }
+      },
+      (Error) => {
+        console.log(Error);
+      }
+    );
   }
 
   ngOnInit() {

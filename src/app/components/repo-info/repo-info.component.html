@@ -93,7 +93,7 @@
     </p-table>
   </div>
 
-  <div *ngIf="api">
+  <div *ngIf="!api">
     <p-table
       [value]="skeleton"
       [paginator]="true"
