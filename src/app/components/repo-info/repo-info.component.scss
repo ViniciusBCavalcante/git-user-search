@@ -1,0 +1,35 @@
+.table-content {
+  text-align: center !important;
+  padding: 10px 10px;
+}
+
+:host ::ng-deep .p-button {
+  margin: 0 0.5rem 0 0;
+  min-width: 10rem;
+}
+
+p {
+  margin: 0;
+}
+
+.confirmation-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+  min-width: 6rem;
+}
+
+::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  padding: 10px !important;
+}
+
+::ng-deep .p-fluid .p-inputtext {
+  padding: 0 !important;
+}
+
+:ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  text-align: center !important;
+}

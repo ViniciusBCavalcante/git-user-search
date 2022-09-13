@@ -9,13 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoInfoComponent implements OnInit {
   api: any;
-  url: string = 'https://api.github.com/users/viniciusbcavalcante/repos';
+  skeleton: any = ['1', '2', '3', '4', '5'];
+  url: string = 'https://api.github.com/users/mojombo/repos';
   dadosTabela: any = {
-    header: ['teste', 'teste2'],
+    header: ['Name', 'Description', 'Language', 'Created at', 'Stars'],
     body: [],
   };
   first = 0;
   rows = 5;
+  displayModal: boolean;
 
   constructor(private consumoApi: ApiCallService, https: HttpClient) {}
 
@@ -31,5 +33,14 @@ export class RepoInfoComponent implements OnInit {
 
   ngOnChanges() {
     this.getDados();
+  }
+
+  toggleModal() {
+    this.displayModal = true;
+    console.log(this.displayModal);
+  }
+
+  showModalDialog() {
+    this.displayModal = true;
   }
 }
