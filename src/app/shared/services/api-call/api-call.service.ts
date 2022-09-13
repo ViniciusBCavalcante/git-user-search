@@ -2,6 +2,9 @@ import { map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+import { repoInfo } from '../../models/repo-info';
+import { userInfo } from '../../models/user-info';
+
 @Injectable({
   providedIn: 'root',
 })

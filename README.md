@@ -1,18 +1,15 @@
 # Git Hub - Buscador de Usuários
 
-Aplicação Web visando a busca de usuários e detalhamento de repositórios do GitHub.
-Projeto desenvolvido utilizando Angular na versão 14.2.2 e APIs públicas do GitHub
+Aplicação Web desenvolvida para realizar busca de usuários do GitHub e detalhar seus repositórios.
 
 <!-- Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto. -->
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
-
-- [Angular](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-- [PrimeNG](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-- [Bootstrap](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-- [API GitHub](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
+- [Angular](https://angular.io/docs)
+- [PrimeNG](https://www.primefaces.org/primeng/setup)
+- [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+- [API GitHub](https://docs.github.com/en/rest)
 
 ### 📋 Pré-requisitos
 
@@ -69,9 +66,7 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## ✒️ Autor
 
-- [**Vinícius Barbosa Cavalcante**](https://github.com/ViniciusBCavalcante) - _Desenvolvimento_ - [umdesenvolvedor](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+- [**Vinícius Barbosa Cavalcante**](https://github.com/ViniciusBCavalcante) - Desenvolvedor -
 
 # GitUserSearch
 
