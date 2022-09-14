@@ -31,14 +31,19 @@ $inputTextColor: white;
 .usuarios-historico {
   padding: 10px 0px;
   width: 170px;
-  margin: 0 0 5px 10px;
+  margin: 10px 0 5px 10px;
   text-align: center;
   font-size: 15px;
-  background-color: rgba(90, 99, 119, 0.9);
+  background-color: #64748b;
   color: white;
   border-radius: 20px;
   border-color: transparent;
-  margin-top: 10px;
+  cursor: pointer;
+}
+
+.usuarios-historico:hover {
+  background-color: #475569;
+  border-color: #475569;
 }
 
 .center {
@@ -51,4 +56,28 @@ $inputTextColor: white;
 .texto-inicial {
   font-weight: bold;
   font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+  .usuarios-historico {
+    width: 145px;
+    font-size: 14px;
+    margin: 10px 0 5px 5px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .usuarios-historico {
+    width: 170px;
+    font-size: 15px;
+    margin: 10px 0 5px 10px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .usuarios-historico {
+    width: 200px;
+    font-size: 17px;
+    margin: 10px 0 5px 15px;
+  }
 }

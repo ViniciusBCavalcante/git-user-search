@@ -17,20 +17,38 @@ body {
 }
 
 .user-info {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 25px;
 }
 
 .stats {
-  background: #f2f5f8 !important;
+  background: #f8f9fa !important;
   width: 200px;
   justify-content: space-around;
   color: #000 !important;
 }
 
 .follow {
-  font-size: 10px;
+  font-size: 12px;
   color: #a1aab9;
 }
 .quantity {
   font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  .profile-picture {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .profile-picture {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .profile-picture {
+    width: 200px;
+  }
 }
