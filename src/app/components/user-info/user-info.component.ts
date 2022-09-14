@@ -9,15 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoComponent implements OnInit {
   api: any;
-  // url: string = 'https://api.github.com/users/mojombo';
-  url: string = 'https://api.github.com/users/asdxaa';
+  url: string = 'https://api.github.com/users/mojombo';
+  // url: string = 'https://api.github.com/users/asdxaa';
 
   constructor(private consumoApi: ApiCallService, https: HttpClient) {}
 
   getDados() {
     this.consumoApi.getDadosService(this.url).subscribe(
       (result) => {
-        if (result.status == 200) {
+        console.log(result);
+        console.log(result.status);
+        if (result.status == undefined) {
           console.log(result);
           this.api = result;
         }

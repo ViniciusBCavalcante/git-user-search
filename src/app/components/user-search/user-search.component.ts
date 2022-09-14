@@ -68,7 +68,7 @@ export class UserSearchComponent {
 
   setUser(user: any) {
     console.log(user[0]);
-    this.username = user[0];
+    this.username = user;
     this.getUserHistorico();
   }
 }

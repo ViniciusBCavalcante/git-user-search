@@ -11,8 +11,8 @@ export class RepoInfoComponent implements OnInit {
   api: any;
   skeleton: any = ['1', '2', '3', '4', '5'];
 
-  // url: string = 'https://api.github.com/users/mojombo/repos';
-  url: string = 'https://api.github.com/users/asdxaa/repos';
+  url: string = 'https://api.github.com/users/mojombo/repos';
+  // url: string = 'https://api.github.com/users/asdxaa/repos';
 
   dadosTabela: any = {
     header: ['Name', 'Description', 'Language', 'Created at', 'Stars'],
@@ -21,14 +21,18 @@ export class RepoInfoComponent implements OnInit {
   first = 0;
   rows = 5;
   displayModal: boolean;
+  highlighted: any;
 
   constructor(private consumoApi: ApiCallService, https: HttpClient) {}
 
   getDados() {
     this.consumoApi.getDadosService(this.url).subscribe(
       (result) => {
-        if (result.status == 200) {
+        console.log(result);
+        console.log(result.status);
+        if (result.status == undefined) {
           this.api = result;
+          console.log(this.api);
         }
       },
       (Error) => {
