@@ -1,6 +1,9 @@
 export class userInfo {
-  id: string;
+  avatar_url: string;
   name: string;
-  html_url: string;
-  description: string;
+  login: string;
+  bio: string;
+  location: string;
+  followers: string;
+  following: string;
 }
