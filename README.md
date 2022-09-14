@@ -48,7 +48,7 @@ ng serve
 Abra o seu browser e navegue para:
 
 ```
-[**http://localhost:4200/**](http://localhost:4200/)
+http://localhost:4200/
 ```
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
@@ -76,18 +76,6 @@ Dar exemplos
 ## ✒️ Autor
 
 - [**Vinícius Barbosa Cavalcante**](https://github.com/ViniciusBCavalcante) - Desenvolvedor
-
-# GitUserSearch
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
