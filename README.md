@@ -26,16 +26,29 @@ Package Manager: npm 8.2.0
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Diga como essa etapa será:
+Primeiramente, clone o repositório:
 
 ```
-Dar exemplos
+HTTPS: https://github.com/ViniciusBCavalcante/git-user-search.git
+SSH: git@github.com:ViniciusBCavalcante/git-user-search.git
 ```
 
-E repita:
+Instale todas as dependências:
 
 ```
-Até finalizar
+npm install
+```
+
+Inicialize o servidor de desenvolvimento:
+
+```
+ng serve
+```
+
+Abra o seu browser e navegue para:
+
+```
+[**http://localhost:4200/**](http://localhost:4200/)
 ```
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
@@ -60,13 +73,9 @@ Explique que eles verificam esses testes e porquê.
 Dar exemplos
 ```
 
-## 📦 Implantação
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
 ## ✒️ Autor
 
-- [**Vinícius Barbosa Cavalcante**](https://github.com/ViniciusBCavalcante) - Desenvolvedor -
+- [**Vinícius Barbosa Cavalcante**](https://github.com/ViniciusBCavalcante) - Desenvolvedor
 
 # GitUserSearch
 
