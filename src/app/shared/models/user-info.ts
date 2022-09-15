@@ -6,4 +6,5 @@ export class userInfo {
   location: string;
   followers: string;
   following: string;
+  html_url: string;
 }

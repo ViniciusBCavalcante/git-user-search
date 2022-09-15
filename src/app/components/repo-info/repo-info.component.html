@@ -92,7 +92,7 @@
             {{ elemento.description | replaceNull }}
           </td>
           <td class="table-content" (click)="highlighted = elemento">
-            {{ elemento.language }}
+            {{ elemento.language | replaceNull }}
           </td>
           <td class="table-content" (click)="highlighted = elemento">
             {{ elemento.created_at | date: "dd/MM/yyyy" }}
@@ -167,27 +167,47 @@
     [draggable]="false"
     [resizable]="false"
   >
-    <div *ngIf="dadosModal" class="row mx-0">
-      <div class="col-4">
-        <p class="titulo-detalhamento mb-0">Updated at</p>
-        <p class="texto-detalhamento">
-          {{ dadosModal.updated_at | date: "dd/MM/yyy" }}
-        </p>
-        <p class="titulo-detalhamento mb-0">Pushed at</p>
-        <p class="texto-detalhamento">2015-01-27</p>
+    <div *ngIf="dadosModal">
+      <div class="row mx-0">
+        <div class="col-4">
+          <p class="titulo-detalhamento mb-0">Updated at</p>
+          <p class="texto-detalhamento">
+            {{ dadosModal.updated_at | date: "dd/MM/yyy" }}
+          </p>
+          <p class="titulo-detalhamento mb-0">Pushed at</p>
+          <p class="texto-detalhamento">
+            {{ dadosModal.pushed_at | date: "dd/MM/yyyy" }}
+          </p>
+        </div>
+        <div class="col-4">
+          <p class="titulo-detalhamento mb-0">Forks count</p>
+          <p class="texto-detalhamento">{{ dadosModal.forks_count }}</p>
+          <p class="titulo-detalhamento mb-0">Watchers count</p>
+          <p class="texto-detalhamento">{{ dadosModal.watchers_count }}</p>
+        </div>
+        <div class="col-4">
+          <!-- TODO: Fazer ngIf true = sim, false = não -->
+          <p class="titulo-detalhamento mb-0">Has issues</p>
+          <p
+            *ngIf="dadosModal.has_issues === true; else hasIssues"
+            class="texto-detalhamento"
+          >
+            Sim
+          </p>
+          <ng-template #hasIssues>
+            <p class="texto-detalhamento">Não</p>
+          </ng-template>
+          <p class="titulo-detalhamento mb-0">Open issues count</p>
+          <p class="texto-detalhamento">{{ dadosModal.open_issues_count }}</p>
+        </div>
       </div>
-      <div class="col-4">
-        <p class="titulo-detalhamento mb-0">Forks count</p>
-        <p class="texto-detalhamento">{{ dadosModal.forks_count }}</p>
-        <p class="titulo-detalhamento mb-0">Watchers count</p>
-        <p class="texto-detalhamento">5</p>
-      </div>
-      <div class="col-4">
-        <!-- TODO: Fazer ngIf true = sim, false = não -->
-        <p class="titulo-detalhamento mb-0">Has issues</p>
-        <p class="texto-detalhamento">Sim</p>
-        <p class="titulo-detalhamento mb-0">issues count</p>
-        <p class="texto-detalhamento">2</p>
+      <div class="row mx-0">
+        <div class="col-12" style="text-align: center">
+          <p class="titulo-detalhamento mb-0">Repository URL</p>
+          <a href="{{ dadosModal.html_url }}" class="texto-detalhamento">
+            {{ dadosModal.html_url }}
+          </a>
+        </div>
       </div>
     </div>
     <!-- <ng-template pTemplate="footer">

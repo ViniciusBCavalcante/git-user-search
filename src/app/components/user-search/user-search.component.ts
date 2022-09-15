@@ -91,4 +91,12 @@ export class UserSearchComponent {
     this.username = user;
     this.toggleFiltro();
   }
+
+  limparHistorico() {
+    this.localService.remove('usuarios');
+    this.username_filtrado = [];
+    this.localService.filtrado = false;
+    this.localService.remove(this.username + '_repo');
+    this.localService.remove(this.username + '_user');
+  }
 }

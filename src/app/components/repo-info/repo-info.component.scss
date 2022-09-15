@@ -24,6 +24,11 @@ p {
   text-align: center;
 }
 
+.titulo-detalhamento-url {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .texto-detalhamento {
   text-align: center;
 }
@@ -71,7 +76,10 @@ p {
   color: black;
 }
 
-::ng-deep .p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon:hover {
+::ng-deep
+  .p-datatable
+  .p-sortable-column.p-highlight
+  .p-sortable-column-icon:hover {
   color: black;
 }
 

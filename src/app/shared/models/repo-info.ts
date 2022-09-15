@@ -9,5 +9,6 @@ export class repoInfo {
   forks_count: number;
   watchers_count: number;
   has_issues: boolean;
-  issues_count: number;
+  open_issues_count: number;
+  html_url: string;
 }

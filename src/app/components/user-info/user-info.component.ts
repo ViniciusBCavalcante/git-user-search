@@ -39,11 +39,6 @@ export class UserInfoComponent implements OnInit {
         if (Object.keys(auxError).length !== 0) {
           this.api = auxError;
         } else {
-          this.messageService.add({
-            severity: 'error',
-            summary: 'Atenção!',
-            detail: 'Este usuário não existe.',
-          });
           this.localService.filtrado = false;
         }
       }

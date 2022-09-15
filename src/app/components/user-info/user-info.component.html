@@ -7,7 +7,11 @@
         </div>
 
         <div class="user-info ml-3 w-100">
-          <h4 class="mb-0 mt-0">{{ api.name | replaceNull }}</h4>
+          <h4 class="mb-0 mt-0">
+            <a href="{{ api.html_url }}" class="texto-detalhamento">
+              {{ api.name | replaceNull }}
+            </a>
+          </h4>
           <span>{{ api.login | replaceNull }}</span>
           <br />
           <span>{{ api.bio | replaceNull }}</span>
