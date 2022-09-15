@@ -58,6 +58,24 @@ $inputTextColor: white;
   font-size: 20px;
 }
 
+.botao {
+  background-color: #64748b;
+  border-radius: 20px;
+  border-color: transparent;
+  color: white;
+  padding: 5px 12px;
+  margin: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+.botao:hover {
+  background-color: #475569;
+}
+
 @media (min-width: 1200px) {
   .usuarios-historico {
     width: 145px;
