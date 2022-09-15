@@ -83,13 +83,13 @@
         <tr
           style="cursor: pointer"
           [class.ui-state-highlight]="elemento === highlighted"
-          (click)="toggleModal()"
+          (click)="toggleModal(elemento)"
         >
           <td class="table-content" (click)="highlighted = elemento">
             {{ elemento.name }}
           </td>
           <td class="table-content" (click)="highlighted = elemento">
-            {{ elemento.description }}
+            {{ elemento.description | replaceNull }}
           </td>
           <td class="table-content" (click)="highlighted = elemento">
             {{ elemento.language }}
@@ -167,16 +167,18 @@
     [draggable]="false"
     [resizable]="false"
   >
-    <div class="row mx-0">
+    <div *ngIf="dadosModal" class="row mx-0">
       <div class="col-4">
         <p class="titulo-detalhamento mb-0">Updated at</p>
-        <p class="texto-detalhamento">2021-01-13</p>
+        <p class="texto-detalhamento">
+          {{ dadosModal.updated_at | date: "dd/MM/yyy" }}
+        </p>
         <p class="titulo-detalhamento mb-0">Pushed at</p>
         <p class="texto-detalhamento">2015-01-27</p>
       </div>
       <div class="col-4">
         <p class="titulo-detalhamento mb-0">Forks count</p>
-        <p class="texto-detalhamento">7</p>
+        <p class="texto-detalhamento">{{ dadosModal.forks_count }}</p>
         <p class="titulo-detalhamento mb-0">Watchers count</p>
         <p class="texto-detalhamento">5</p>
       </div>

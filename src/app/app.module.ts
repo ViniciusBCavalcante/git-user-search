@@ -1,3 +1,4 @@
+import { LocalService } from './shared/services/local-storage/local.service';
 import { RepoInfoModule } from './components/repo-info/repo-info.module';
 import { UserInfoModule } from './components/user-info/user-info.module';
 import { UserSearchModule } from './components/user-search/user-search.module';
@@ -19,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserInfoModule,
     RepoInfoModule,
   ],
-  providers: [],
+  providers: [LocalService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

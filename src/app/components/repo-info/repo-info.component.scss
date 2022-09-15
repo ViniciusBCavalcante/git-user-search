@@ -71,10 +71,7 @@ p {
   color: black;
 }
 
-::ng-deep
-  .p-datatable
-  .p-sortable-column.p-highlight
-  .p-sortable-column-icon:hover {
+::ng-deep .p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon:hover {
   color: black;
 }
 

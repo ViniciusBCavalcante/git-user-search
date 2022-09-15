@@ -37,14 +37,14 @@
   </div>
 
   <div class="col-lg-9 col-md-8 card-principal">
-    <div *ngIf="filtrado == false">
+    <div *ngIf="localService.filtrado == false">
       <div class="texto-inicial center mt-4">
         Pesquise um usuário do GitHub ao lado para continuar
       </div>
     </div>
-    <div *ngIf="filtrado == true">
-      <app-user-info></app-user-info>
-      <app-repo-info></app-repo-info>
+    <div *ngIf="localService.filtrado == true">
+      <app-user-info [username]="usernameAux"></app-user-info>
+      <app-repo-info [username]="usernameAux"></app-repo-info>
     </div>
   </div>
 </div>

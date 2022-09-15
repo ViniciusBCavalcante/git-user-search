@@ -1,3 +1,5 @@
+import { ReplaceNullModule } from './../../shared/pipes/replace-null/replace-null.module';
+import { ReplaceNullPipe } from './../../shared/pipes/replace-null.pipe';
 import { SkeletonModule } from 'primeng/skeleton';
 import { RepoInfoComponent } from './repo-info.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +18,7 @@ import { ButtonModule } from 'primeng/button';
     DialogModule,
     ButtonModule,
     SkeletonModule,
+    ReplaceNullModule,
   ],
   exports: [RepoInfoComponent],
 })
