@@ -34,6 +34,7 @@ export class UserSearchComponent {
   ngOnInit(): void {}
 
   toggleFiltro() {
+    debugger;
     this.localService.filtrado = false;
     console.log(this.localService.filtrado);
     console.log(this.username);
@@ -94,7 +95,12 @@ export class UserSearchComponent {
 
   limparHistorico() {
     this.localService.remove('usuarios');
+    this.username_list.forEach((element: any) => {
+      this.localService.remove(element + '_repo');
+      this.localService.remove(element + '_user');
+    });
     this.username_filtrado = [];
+    this.username_list = [];
     this.localService.filtrado = false;
     this.localService.remove(this.username + '_repo');
     this.localService.remove(this.username + '_user');
