@@ -2,7 +2,7 @@
 
 Aplicação Web desenvolvida para realizar busca de usuários do GitHub e detalhar seus repositórios.
 
-<!-- Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto. -->
+Consulte **[Teste da aplicação web](#-Teste da aplicação web)** para detalhamento e explicações.
 
 ## 🛠️ Construído com
 
@@ -52,6 +52,10 @@ http://localhost:4200/
 ```
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+
+## ⚙️ Teste da aplicação web
+
+Explicar como executar os testes automatizados para este sistema.
 
 ## ⚙️ Executando os testes
 
