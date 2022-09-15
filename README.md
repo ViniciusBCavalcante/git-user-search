@@ -2,7 +2,7 @@
 
 Aplicação Web desenvolvida para realizar busca de usuários do GitHub e detalhar seus repositórios.
 
-Consulte **[Guia de Utilização](#%EF%B8%8F#-guia-de-uso)** para detalhamento e explicações.
+Consulte **[Guia de Uso](#-guia-de-uso)** para detalhamento e explicações.
 
 ## 🛠️ Construído com
 
