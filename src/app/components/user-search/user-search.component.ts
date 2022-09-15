@@ -15,7 +15,7 @@ export class UserSearchComponent {
   user: any;
   usernames: any;
   username_list: any = [];
-  username_filtrado: any = [{ id: 0, user: 'ViniciusBCavalcante' }];
+  username_filtrado: any = [{ id: 0, user: 'Viniciusbcavalcante' }];
 
   constructor(
     private messageService: MessageService,

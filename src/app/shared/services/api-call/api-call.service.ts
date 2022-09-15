@@ -9,6 +9,8 @@ import { userInfo } from '../../models/user-info';
   providedIn: 'root',
 })
 export class ApiCallService {
+  static getDadosService: any;
+
   constructor(private https: HttpClient) {}
 
   getDadosService(url: string, args?: any) {

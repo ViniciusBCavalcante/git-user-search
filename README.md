@@ -59,9 +59,9 @@ Há duas formas de acessar a aplicação, sendo:
 </br>
 1- Execução local (vide **[Instalação](#-instalação)**)
 </br>
-2- Acesso do projeto 'produção' através [deste link]()
+2- Acesso do projeto 'produção' através [deste link](https://viniciusbcavalcante.github.io/deploy-git-user-search/user-search)
 
-Logo de início, você irá perceber que na lista de histórico de usuários contém `ViniciusBCavalcante` como sugestão inicial de filtro.
+Logo de início, você irá perceber que na lista de histórico de usuários contém `Viniciusbcavalcante` como sugestão inicial de filtro.
 Caso o usuário clique nesta sugestão, este usuário sugerido será salvo como histórico. Caso negativo e filtrado um usuário diferente, a sugestão irá sumir.
 
 Sugestões de usuários válidos:
@@ -83,7 +83,7 @@ Caso você deseje ser redirecionado para a página GitHub do usuário filtrado, 
 
 Quanto à tabela de repositórios, os filtros por padrão são do tipo "começa com", ou seja, caso deseje buscar a palavra "Angular" e digitar apenas "gular", não será encontrado nenhuma resposta. Para isso, clique no icone de filtro ao lado do campo de entrada e seleciona a opção que atenda a sua necessidade.
 
-Caso você deseje obter mais detalhes a respeito de um repositório especifico, você pode clicar na linha correspondente ao repositório que irá abrir um quadro adicional (modal).
+Caso você desejar obter mais detalhes a respeito de um repositório especifico, você pode clicar na linha correspondente ao repositório que irá abrir um quadro adicional (modal).
 
 ## ⚙️ Executando os testes
 
