@@ -2,7 +2,7 @@
 
 Aplicação Web desenvolvida para realizar busca de usuários do GitHub e detalhar seus repositórios.
 
-Consulte **[Teste da aplicação web](#-guia-de-utilização)** para detalhamento e explicações.
+Consulte **[Guia de Utilização](#-guia-de-uso)** para detalhamento e explicações.
 
 ## 🛠️ Construído com
 
@@ -11,7 +11,7 @@ Consulte **[Teste da aplicação web](#-guia-de-utilização)** para detalhament
 - [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 - [API GitHub](https://docs.github.com/en/rest)
 
-### 📋 Pré-requisitos
+## 📋 Pré-requisitos
 
 Para correta operação em sua máquina local, recomenda-se os requisitos abaixo na mesma versão ou superior.
 
@@ -22,7 +22,7 @@ Node: 16.13.1
 Package Manager: npm 8.2.0
 ```
 
-### 🔧 Instalação
+## 🔧 Instalação
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
@@ -53,13 +53,15 @@ http://localhost:4200/
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
-## ⚙️ Guia de Utilização
+## ⚙️ Guia de Uso
 
 Há duas formas de acessar a aplicação, sendo:
+</br>
 1- Execução local (vide **[Instalação](#-instalação)**)
+</br>
 2- Acesso do projeto 'produção' através [deste link]()
 
-Logo de início, você irá perceber que na lista de histórico de usuários contém 'ViniciusBCavalcante' como sugestão inicial de filtro.
+Logo de início, você irá perceber que na lista de histórico de usuários contém `ViniciusBCavalcante` como sugestão inicial de filtro.
 Caso o usuário clique nesta sugestão, este usuário sugerido será salvo como histórico. Caso negativo e filtrado um usuário diferente, a sugestão irá sumir.
 
 Sugestões de usuários válidos:
@@ -73,13 +75,21 @@ Sugestões de usuários inválidos (não existentes):
 - jackiechan30
 - harryjamespotter30
 
-o botão do histórico, será retornado
+Para os usuários não existentes, será emitido um alerta vermelho no canto superior direito e a página irá ser redirecionada para o início.
+
+Para os usuários existentes, as informações da conta e seus repositórios serão renderizados.
+
+Caso você deseje ser redirecionado para a página GitHub do usuário filtrado, clique no nome completo do usuário ao lado da foto de perfil.
+
+Quanto à tabela de repositórios, os filtros por padrão são do tipo "começa com", ou seja, caso deseje buscar a palavra "Angular" e digitar apenas "gular", não será encontrado nenhuma resposta. Para isso, clique no icone de filtro ao lado do campo de entrada e seleciona a opção que atenda a sua necessidade.
+
+Caso você deseje obter mais detalhes a respeito de um repositório especifico, você pode clicar na linha correspondente ao repositório que irá abrir um quadro adicional (modal).
 
 ## ⚙️ Executando os testes
 
 Explicar como executar os testes automatizados para este sistema.
 
-### 🔩 Analise os testes de ponta a ponta
+## 🔩 Analise os testes de ponta a ponta
 
 Explique que eles verificam esses testes e porquê.
 
@@ -87,7 +97,7 @@ Explique que eles verificam esses testes e porquê.
 Dar exemplos
 ```
 
-### ⌨️ E testes de estilo de codificação
+## ⌨️ E testes de estilo de codificação
 
 Explique que eles verificam esses testes e porquê.
 
