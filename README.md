@@ -2,7 +2,7 @@
 
 Aplicação Web desenvolvida para realizar busca de usuários do GitHub e detalhar seus repositórios.
 
-Consulte **[Teste da aplicação web](#-Teste da aplicação web)** para detalhamento e explicações.
+Consulte **[Teste da aplicação web](#-guia-de-utilização)** para detalhamento e explicações.
 
 ## 🛠️ Construído com
 
@@ -53,9 +53,27 @@ http://localhost:4200/
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
-## ⚙️ Teste da aplicação web
+## ⚙️ Guia de Utilização
 
-Explicar como executar os testes automatizados para este sistema.
+Há duas formas de acessar a aplicação, sendo:
+1- Execução local (vide **[Instalação](#-instalação)**)
+2- Acesso do projeto 'produção' através [deste link]()
+
+Logo de início, você irá perceber que na lista de histórico de usuários contém 'ViniciusBCavalcante' como sugestão inicial de filtro.
+Caso o usuário clique nesta sugestão, este usuário sugerido será salvo como histórico. Caso negativo e filtrado um usuário diferente, a sugestão irá sumir.
+
+Sugestões de usuários válidos:
+
+- Angelabauer
+- Mschwarzmueller
+- Jonasschmedtmann
+
+Sugestões de usuários inválidos (não existentes):
+
+- jackiechan30
+- harryjamespotter30
+
+o botão do histórico, será retornado
 
 ## ⚙️ Executando os testes
 

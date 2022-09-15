@@ -5,11 +5,11 @@
         <div class="image">
           <img src="{{ api.avatar_url }}" class="profile-picture" />
         </div>
-
         <div class="user-info ml-3 w-100">
           <h4 class="mb-0 mt-0">
             <a href="{{ api.html_url }}" class="texto-detalhamento">
               {{ api.name | replaceNull }}
+              <i class="pi pi-external-link"> </i>
             </a>
           </h4>
           <span>{{ api.login | replaceNull }}</span>
