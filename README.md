@@ -79,7 +79,7 @@ Para os usuários existentes, as informações da conta e seus repositórios ser
 
 Caso você deseje ser redirecionado para a página GitHub do usuário filtrado, clique no nome completo do usuário ao lado da foto de perfil.
 
-Quanto à tabela de repositórios, os filtros por padrão são do tipo "começa com", ou seja, caso deseje buscar a palavra "Angular" e digitar apenas "gular", não será encontrado nenhuma resposta. Para isso, clique no icone de filtro ao lado do campo de entrada e seleciona a opção que atenda a sua necessidade.
+Quanto à tabela de repositórios, os filtros por padrão são do tipo "começa com", ou seja, caso deseje buscar a palavra "Angular" e digitar apenas "gular", não será encontrado nenhuma resposta. Para isso, clique no icone de filtro ao lado do campo de entrada e selecione a opção que atenda a sua necessidade.
 
 Caso você desejar obter mais detalhes a respeito de um repositório especifico, você pode clicar na linha correspondente ao repositório que irá abrir um quadro adicional (modal).
 
