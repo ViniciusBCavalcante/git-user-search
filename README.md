@@ -51,8 +51,6 @@ Abra o seu browser e navegue para:
 http://localhost:4200/
 ```
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
 ## 👨‍🏫 Guia de Uso
 
 Há duas formas de acessar a aplicação, sendo:
@@ -85,25 +83,8 @@ Quanto à tabela de repositórios, os filtros por padrão são do tipo "começa 
 
 Caso você desejar obter mais detalhes a respeito de um repositório especifico, você pode clicar na linha correspondente ao repositório que irá abrir um quadro adicional (modal).
 
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-## 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
+Importante: A página está preparada para caso ocorra problemas com a sua conexão com a internet, você ainda poderá obter as informações dos usuários anteriormente filtrados, exceto a foto de perfil, pois se encontra em uma página da internet.
+Recomenda-se que não realize a atualização da página (F5) nesta situação.
 
 ## ✒️ Autor
 
