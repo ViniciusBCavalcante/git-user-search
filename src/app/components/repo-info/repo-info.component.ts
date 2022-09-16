@@ -11,12 +11,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./repo-info.component.scss'],
 })
 export class RepoInfoComponent implements OnInit {
-  api: repoInfo[];
-  skeleton: any = ['1', '2', '3', '4', '5'];
   @Input() username: any;
+  api: repoInfo[];
+  displayModal: boolean;
+  highlighted: any;
+  dadosModal: repoInfo;
+  skeleton: any = ['1', '2', '3', '4', '5'];
 
   url: string = 'https://api.github.com/users/';
-  // url: string = 'https://api.github.com/users/asdxaa/repos';
 
   dadosTabela: any = {
     header: ['Name', 'Description', 'Language', 'Created at', 'Stars'],
@@ -24,9 +26,6 @@ export class RepoInfoComponent implements OnInit {
   };
   first = 0;
   rows = 5;
-  displayModal: boolean;
-  highlighted: any;
-  dadosModal: repoInfo;
 
   constructor(
     private consumoApi: ApiCallService,
@@ -40,15 +39,12 @@ export class RepoInfoComponent implements OnInit {
       .getDadosService(this.url + this.username + '/repos')
       .subscribe(
         (result) => {
-          console.log(result);
-          console.log(result.status);
           if (result.status == undefined) {
             this.api = result;
             this.localService.set(this.username + '_repo', result);
           }
         },
         (Error) => {
-          console.log(Error);
           let auxError = this.localService.get(this.username + '_repo');
           if (Object.keys(auxError).length !== 0) {
             this.messageService.add({
@@ -83,7 +79,6 @@ export class RepoInfoComponent implements OnInit {
   toggleModal(dadosModal: any) {
     this.dadosModal = dadosModal;
     this.displayModal = true;
-    console.log(this.displayModal);
   }
 
   showModalDialog() {
