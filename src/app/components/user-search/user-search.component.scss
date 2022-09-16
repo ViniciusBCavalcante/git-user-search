@@ -1,9 +1,101 @@
 .card-lateral {
   border-top-right-radius: 28px;
   min-height: calc(100vh);
+  background-color: rgba(59, 67, 86, 255);
+}
+
+.user-input {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+// .float-input {
+//   background-color: rgba(90, 99, 119, 0.9);
+// }
+
+$inputFilledBg: rgba(90, 99, 119, 0.9);
+
+$inputTextColor: white;
+
+// $buttonTextColor: white;
+
+.card-lateral-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.usuarios-historico {
+  padding: 10px 0px;
+  width: 170px;
+  margin: 10px 0 5px 10px;
+  text-align: center;
+  font-size: 15px;
+  background-color: #64748b;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.usuarios-historico:hover {
+  background-color: #475569;
+  border-color: #475569;
 }
 
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.texto-inicial {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.botao {
+  background-color: #64748b;
+  border-radius: 20px;
+  border-color: transparent;
+  color: white;
+  padding: 5px 12px;
+  margin: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+.botao:hover {
+  background-color: #475569;
+}
+
+@media (min-width: 1200px) {
+  .usuarios-historico {
+    width: 145px;
+    font-size: 14px;
+    margin: 10px 0 5px 5px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .usuarios-historico {
+    width: 170px;
+    font-size: 15px;
+    margin: 10px 0 5px 10px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .usuarios-historico {
+    width: 200px;
+    font-size: 17px;
+    margin: 10px 0 5px 15px;
+  }
 }

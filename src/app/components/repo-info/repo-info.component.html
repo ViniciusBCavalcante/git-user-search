@@ -1,0 +1,222 @@
+<div
+  class="card my-2 pt-0 pb-0"
+  style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"
+>
+  <div *ngIf="api">
+    <p-table
+      [value]="api"
+      [paginator]="true"
+      [rows]="rows"
+      [showCurrentPageReport]="true"
+      [(first)]="first"
+      currentPageReportTemplate="Mostrando {first}-{last} de {totalRecords} entradas"
+      [rowsPerPageOptions]="[5, 10, 25]"
+      sortMode="multiple"
+    >
+      <ng-template pTemplate="header">
+        <tr class="paint">
+          <th
+            pSortableColumn="name"
+            style="
+              border-top-left-radius: 5px;
+              padding: 10px 10px;
+              width: 300px;
+            "
+          >
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[0] }} <p-sortIcon field="name"></p-sortIcon>
+            </div>
+          </th>
+          <th
+            pSortableColumn="description"
+            style="padding: 10px 10px; width: 350px"
+          >
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[1] }}
+              <p-sortIcon field="description"></p-sortIcon>
+            </div>
+          </th>
+          <th
+            pSortableColumn="language"
+            style="padding: 10px 10px; width: 160px"
+          >
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[2] }}
+              <p-sortIcon field="language"></p-sortIcon>
+            </div>
+          </th>
+          <th
+            pSortableColumn="created_at"
+            style="padding: 10px 10px; width: 170px"
+          >
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[3] }}
+              <p-sortIcon field="created_at"></p-sortIcon>
+            </div>
+          </th>
+          <th
+            pSortableColumn="stargazers_count"
+            style="padding: 10px 10px; width: 200px"
+          >
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[4] }}
+              <p-sortIcon field="stargazers_count"></p-sortIcon>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <p-columnFilter type="text" field="name"></p-columnFilter>
+          </th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>
+            <p-columnFilter
+              type="text"
+              field="stargazers_count"
+            ></p-columnFilter>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-elemento>
+        <tr
+          style="cursor: pointer"
+          [class.ui-state-highlight]="elemento === highlighted"
+          (click)="toggleModal(elemento)"
+        >
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.name }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.description | replaceNull }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.language | replaceNull }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.created_at | date: "dd/MM/yyyy" }}
+          </td>
+          <td class="table-content" (click)="highlighted = elemento">
+            {{ elemento.stargazers_count }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <div *ngIf="!api">
+    <p-table
+      [value]="skeleton"
+      [paginator]="true"
+      [rows]="rows"
+      [rowsPerPageOptions]="[5, 10, 25]"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="border-top-left-radius: 5px">
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[0] }} <p-sortIcon field="name"></p-sortIcon>
+            </div>
+          </th>
+          <th>
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[1] }}
+              <p-sortIcon field="description"></p-sortIcon>
+            </div>
+          </th>
+          <th>
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[2] }}
+              <p-sortIcon field="language"></p-sortIcon>
+            </div>
+          </th>
+          <th>
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[3] }}
+              <p-sortIcon field="created_at"></p-sortIcon>
+            </div>
+          </th>
+          <th>
+            <div class="d-flex justify-content-center">
+              {{ dadosTabela.header[4] }}
+              <p-sortIcon field="stargazers_count"></p-sortIcon>
+            </div>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-elemento>
+        <tr>
+          <td><p-skeleton></p-skeleton></td>
+          <td><p-skeleton></p-skeleton></td>
+          <td><p-skeleton></p-skeleton></td>
+          <td><p-skeleton></p-skeleton></td>
+          <td><p-skeleton></p-skeleton></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<div>
+  <p-dialog
+    header="Detalhamento"
+    [(visible)]="displayModal"
+    [modal]="true"
+    [style]="{ width: '40vw' }"
+    [draggable]="false"
+    [resizable]="false"
+  >
+    <div *ngIf="dadosModal">
+      <div class="row mx-0">
+        <div class="col-4">
+          <p class="titulo-detalhamento mb-0">Updated at</p>
+          <p class="texto-detalhamento">
+            {{ dadosModal.updated_at | date: "dd/MM/yyy" }}
+          </p>
+          <p class="titulo-detalhamento mb-0">Pushed at</p>
+          <p class="texto-detalhamento">
+            {{ dadosModal.pushed_at | date: "dd/MM/yyyy" }}
+          </p>
+        </div>
+        <div class="col-4">
+          <p class="titulo-detalhamento mb-0">Forks count</p>
+          <p class="texto-detalhamento">{{ dadosModal.forks_count }}</p>
+          <p class="titulo-detalhamento mb-0">Watchers count</p>
+          <p class="texto-detalhamento">{{ dadosModal.watchers_count }}</p>
+        </div>
+        <div class="col-4">
+          <!-- TODO: Fazer ngIf true = sim, false = não -->
+          <p class="titulo-detalhamento mb-0">Has issues</p>
+          <p
+            *ngIf="dadosModal.has_issues === true; else hasIssues"
+            class="texto-detalhamento"
+          >
+            Sim
+          </p>
+          <ng-template #hasIssues>
+            <p class="texto-detalhamento">Não</p>
+          </ng-template>
+          <p class="titulo-detalhamento mb-0">Open issues count</p>
+          <p class="texto-detalhamento">{{ dadosModal.open_issues_count }}</p>
+        </div>
+      </div>
+      <div class="row mx-0">
+        <div class="col-12" style="text-align: center">
+          <p class="titulo-detalhamento mb-0">Repository URL</p>
+          <a href="{{ dadosModal.html_url }}" class="texto-detalhamento">
+            {{ dadosModal.html_url }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <ng-template pTemplate="footer">
+      <p-button
+        icon="pi pi-check"
+        (click)="displayModal = false"
+        label="Ok"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template> -->
+  </p-dialog>
+</div>
