@@ -34,15 +34,11 @@ export class UserSearchComponent {
   ngOnInit(): void {}
 
   toggleFiltro() {
-    debugger;
     this.localService.filtrado = false;
-    console.log(this.localService.filtrado);
-    console.log(this.username);
 
     if (this.username !== '' && this.username !== undefined) {
       this.usernameAux = this.username;
       this.localService.filtrado = true;
-      console.log(this.localService.filtrado);
       this.getUserHistorico();
     } else {
       this.messageService.add({
@@ -65,15 +61,12 @@ export class UserSearchComponent {
     let usernames: any = [];
     usernames = this.localService.get('usuarios');
     this.username_list.push(this.username);
-    console.log(this.username_list);
 
     // Transformação de array em lista de objetos
     var list = Object.assign({}, this.username_list);
-    console.log(list);
     usernames = Object.keys(list).map(function (key) {
       return { id: key, user: list[key] };
     });
-    console.log(usernames);
 
     // Remoção dos usernames duplicados
     var key = ['user'];
@@ -83,12 +76,10 @@ export class UserSearchComponent {
           ((k) => !s.has(k) && s.add(k))(key.map((k) => o[k]).join('|'))
       )(new Set())
     );
-    console.log(this.username_filtrado);
     this.localService.set('usuarios', this.username_filtrado);
   }
 
   setUser(user: any) {
-    console.log(user[0]);
     this.username = user;
     this.toggleFiltro();
   }

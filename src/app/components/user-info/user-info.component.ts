@@ -10,10 +10,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./user-info.component.scss'],
 })
 export class UserInfoComponent implements OnInit {
+  @Input() username: any;
   api: any;
   url: string = 'https://api.github.com/users/';
-  // url: string = 'https://api.github.com/users/asdxaa';
-  @Input() username: any;
 
   constructor(
     private consumoApi: ApiCallService,
@@ -25,16 +24,12 @@ export class UserInfoComponent implements OnInit {
   getDados() {
     this.consumoApi.getDadosService(this.url + this.username).subscribe(
       (result) => {
-        console.log(result);
-        console.log(result.status);
         if (result.status == undefined) {
-          console.log(result);
           this.api = result;
           this.localService.set(this.username + '_user', result);
         }
       },
       (Error) => {
-        console.log(Error);
         let auxError = this.localService.get(this.username + '_user');
         if (Object.keys(auxError).length !== 0) {
           this.api = auxError;
